@@ -67,15 +67,20 @@
 <body>
 
 <div id="container">
-	 <h1>Probando las vistas</h1> 
-	<h1>Hola <?=$nombre?></h1>
+	 <h1>Probando $_POST</h1> 
+	
+	<h2>Formulario de envío</h2>
+			<form id="form" action="index.php/hola/comprueba" method="POST">		
+			<p>Nombre: <input name="name" id="name" type="text"></p>
+			<p>Apellido: <input name="lastname" id="lastname" type="text"></p>
+			<input type="submit" value="Guardar Usuario" id="save">
+		</form>
+		
+
 		
 	
 
-	<div id="body">
-           
-           
-</div>
+
 
 </body>
 </html>
