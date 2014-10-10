@@ -73,7 +73,7 @@
 			<form id="form" action="index.php/hola/comprueba" method="POST">		
 			<p>Nombre: <input name="name" id="name" type="text"></p>
 			<p>Apellido: <input name="lastname" id="lastname" type="text"></p>
-			<input type="submit" value="Guardar Usuario" id="save">
+			<input type="submit" value="Saludar" id="save">
 		</form>
 		
 
