@@ -4,6 +4,7 @@ class Hola extends CI_Controller {
 	
 	function __construct(){
 		parent::__construct();
+		
 	}
 
 
@@ -18,18 +19,19 @@ class Hola extends CI_Controller {
 	$this->load->view('welcome_message',$data);
 }
 	
-		
 	public function comprueba(){
-		if (null !==$this->input->post()){
+		$nombre = $this->input->post('name');
+		$apellido = $this->input->post('lastname');
+		if (($nombre !=="")||($apellido !=="")){
 			$data = array(
 	          "name" => $this->input->post('name'),
               "lastname" => $this->input->post('lastname'));
-			echo "<h1>Hola ".$data['name']." tu apellido es ".$data['lastname']."</h1>";
+			$this->load->view('saluda_user',$data);
+		}else{
+			echo "<h1>Debes enviar algo</h1>";
+			
 		}
-
-
-}
-
+    }
 
 }
 
