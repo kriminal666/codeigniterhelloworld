@@ -74,13 +74,24 @@
 			<p>Nombre: <input name="name" id="name" type="text"></p>
 			<p>Apellido: <input name="lastname" id="lastname" type="text"></p>
 			<input type="submit" value="Saludar" id="save">
-		</form>
+		</form><br /><br />
 		
+		<?php if(isset($name) && isset($lastname)) : ?>
+			<?php if(($name!="")&&($lastname!="")) :?>
+			<table border="2px" bgcolor="#00FF00">
+				<tr>
+					<td>
+						<h2>Hola <u><?=$name?></u> tu apellido es <u><?=$lastname?></u></h2>
+					</td>
+				</tr>
+			</table>
+ 			<?php endif ?>
+ 		<?php endif ?>
+  		<?php if(isset($error)) :?>
+  				<?php  echo $error;?>
+
+		<?php endif ?>
 
 		
-	
-
-
-
-</body>
+	</body>
 </html>
