@@ -71,11 +71,16 @@
 	
 	<h2>Formulario de envío</h2>
 	         <!-- Utilizo el helper de la URL-->
-			<form id="form" action="<?=base_url()?>/index.php/hola/comprueba" method="POST">		
-			<p>Nombre: <input name="name" id="name" type="text"></p>
-			<p>Apellido: <input name="lastname" id="lastname" type="text"></p>
-			<input type="submit" value="Saludar" id="save">
-		</form><br /><br />
+	         <!--Utilizo el helper del formulario-->
+	         <?php echo form_open(base_url().'index.php/hola/comprueba',array('name'=>'formulario','id'=>'form'));?>
+	         <br />
+	         <b><?= form_label('Nombre','name');?></b><br />
+	         <?= form_input('name'); ?><br />
+	         <b><?= form_label('Apellido','lastname');?></b><br />
+	         <?= form_input('lastname'); ?><br /><br />
+			 <?= form_submit('send','Saludar');?>
+	         <?= form_close();?>
+		<br /><br />
 		
 		<?php if(isset($name) && isset($lastname)) : ?>
 			<?php if(($name!="")&&($lastname!="")) :?>

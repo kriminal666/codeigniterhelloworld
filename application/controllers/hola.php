@@ -5,22 +5,19 @@ class Hola extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->helper('form');
 	}
 
 
 	
 	public function index()
 	{
-		$this->greeting("mundo");
+		$this->load->view('welcome_message');
 	}
 	 
-        public function greeting($name){
-	$data['nombre'] = $name;
-	$this->load->view('welcome_message',$data);
-}
 	
 	public function comprueba(){
-		
+		//Si existe la variable y los campos no están vacíos
 		if (isset($_POST)&&($_POST['name'] !="")&&($_POST['lastname'] !="")){
 			$data = array(
 	          "name" => $this->input->get_post('name'),
