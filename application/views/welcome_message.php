@@ -70,7 +70,8 @@
 	 <h1>Probando $_POST</h1> 
 	
 	<h2>Formulario de envío</h2>
-			<form id="form" action="index.php/hola/comprueba" method="POST">		
+	         <!-- Utilizo el helper de la URL-->
+			<form id="form" action="<?=base_url()?>/index.php/hola/comprueba" method="POST">		
 			<p>Nombre: <input name="name" id="name" type="text"></p>
 			<p>Apellido: <input name="lastname" id="lastname" type="text"></p>
 			<input type="submit" value="Saludar" id="save">
