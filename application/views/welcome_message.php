@@ -72,14 +72,14 @@
 	<h2>Formulario de envío</h2>
 	         <!-- Utilizo el helper de la URL-->
 	         <!--Utilizo el helper del formulario-->
-	         <?php echo form_open(base_url().'index.php/hola/comprueba',array('name'=>'formulario','id'=>'form'));?>
+	         <?= $formOpen;?>
 	         <br />
-	         <b><?= form_label('Nombre','name');?></b><br />
-	         <?= form_input('name'); ?><br />
-	         <b><?= form_label('Apellido','lastname');?></b><br />
-	         <?= form_input('lastname'); ?><br /><br />
-			 <?= form_submit('send','Saludar');?>
-	         <?= form_close();?>
+	         <b><?= $label1;?></b><br />
+	         <?= $input1; ?><br />
+	         <b><?= $label2;?></b><br />
+	         <?= $input2 ?><br /><br />
+			 <?= $submit;?>
+	         <?= $formClose;?>
 		<br /><br />
 		
 		<?php if(isset($name) && isset($lastname)) : ?>
